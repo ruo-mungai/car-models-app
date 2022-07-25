@@ -6,9 +6,17 @@ import { makeStyles } from '@material-ui/styles'
 function App() {
   const useStyles= makeStyles((theme)=>({
     textField:{
+      margin:"20px 0",
+       width:"200%",
+      height:"30px",
+     
+    },
+      buttonField:{
       margin:"10px 0",
-       width:"50%",
-      height:"30px"
+       width:"150%",
+      height:"30px",
+      top:"10px"
+
      
     },
     app:{
@@ -16,6 +24,9 @@ function App() {
       alignItems:"center",
       justifyContent:"center",
       flexDirection:"column"
+    },
+    heading:{
+      textShadow:"1px 1px #ff7310"
     }
   }))
 
@@ -23,9 +34,9 @@ function App() {
 
   return (
     <div className={styles.app}>
-       <h1>React Car App</h1>
+       <h1 className={styles.heading}>React Car App</h1>
        <img src={images} style={{width:"300px"}} alt="car Pic"/>
-       <CarForm classes={styles.app} textStyle={styles.textField}/>
+       <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField}/>
     </div>
   )
 }
