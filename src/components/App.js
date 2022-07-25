@@ -3,21 +3,26 @@ import React from 'react'
 import CarForm from './CarForm'
 import useStyles from './Styles'
 import DisplayCars from './DisplayCars'
-import {useState,useEfect} from 'react'
+import {useState,useEffect} from 'react'
 
 function App() {
+   const styles=useStyles();
+
   const [cars, setCars]=useState([])
-
-  
-
- const styles=useStyles();
-
+useEffect(() => {
+    fetch("http://localhost:3000/cars")
+    .then(response => response.json())
+    .then((data) => {
+      setCars(data)
+    })
+  }, [])
+ 
   return (
     <div className={styles.app}>
        <h1 className={styles.heading}>React Car App</h1>
        <img src={images} style={{width:"300px"}} alt="car Pic"/>
        <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField}/>
-       <DisplayCars/>
+       <DisplayCars myCars={cars}/>
     </div>
   )
 }

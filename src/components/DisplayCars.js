@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DisplayCars() {
+function DisplayCars(myCars) {
   return (
     <div>DisplayCars</div>
   )
