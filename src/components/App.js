@@ -1,34 +1,14 @@
 import images from '../images.png'
 import React from 'react'
 import CarForm from './CarForm'
-import { makeStyles } from '@material-ui/styles'
+import useStyles from './Styles'
+import DisplayCars from './DisplayCars'
+import {useState,useEfect} from 'react'
 
 function App() {
-  const useStyles= makeStyles((theme)=>({
-    textField:{
-      margin:"20px 0",
-       width:"200%",
-      height:"30px",
-     
-    },
-      buttonField:{
-      margin:"10px 0",
-       width:"150%",
-      height:"30px",
-      top:"10px"
+  const [cars, setCars]=useState([])
 
-     
-    },
-    app:{
-      display:"flex",
-      alignItems:"center",
-      justifyContent:"center",
-      flexDirection:"column"
-    },
-    heading:{
-      textShadow:"1px 1px #ff7310"
-    }
-  }))
+  
 
  const styles=useStyles();
 
@@ -37,6 +17,7 @@ function App() {
        <h1 className={styles.heading}>React Car App</h1>
        <img src={images} style={{width:"300px"}} alt="car Pic"/>
        <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField}/>
+       <DisplayCars/>
     </div>
   )
 }
