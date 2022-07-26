@@ -37,21 +37,10 @@ function DisplayCars({myCars,styles,button}) {
 
   const myCar=myCars.map((car)=>(
 
-    <Table className={classes.table} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Make/Brand</StyledTableCell>
-            <StyledTableCell align="right">Model</StyledTableCell>
-            <StyledTableCell align="right">Origin</StyledTableCell>
-            <StyledTableCell align="right">Year</StyledTableCell>
-            <StyledTableCell align="right">Car Info</StyledTableCell>
-            <StyledTableCell align="right">Image</StyledTableCell>
-            <StyledTableCell align="right"></StyledTableCell>
-            <StyledTableCell align="right"></StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-            <StyledTableRow key={car.id}>
+    
+    <Table className={classes.table} aria-label="customized table" key={car.id}> 
+        <TableBody >
+            <StyledTableRow >
               <StyledTableCell component="th" scope="row">
                 {car.Make}
               </StyledTableCell>
@@ -67,16 +56,21 @@ function DisplayCars({myCars,styles,button}) {
       </Table>
   
   ));
-    {/*<div className={styles}key={car.id}>
-      <h3>{car.Make}</h3>
-     <h4>{car.Model}
-     {car.Origin}
-      {car.Year}
-      {car.Car_Info}</h4>
-  </div>*/}
-
+  
   return (
-    <div >
+    <div  >
+      <TableHead>
+          <TableRow>
+            <StyledTableCell>Make/Brand</StyledTableCell>
+            <StyledTableCell align="right">Model</StyledTableCell>
+            <StyledTableCell align="right">Origin</StyledTableCell>
+            <StyledTableCell align="right">Year</StyledTableCell>
+            <StyledTableCell align="right">Car Info</StyledTableCell>
+            <StyledTableCell align="right">Image</StyledTableCell>
+            <StyledTableCell align="right"> </StyledTableCell>
+            <StyledTableCell align="right"> </StyledTableCell>
+          </TableRow>
+        </TableHead>
      {myCar}
     </div>
   )

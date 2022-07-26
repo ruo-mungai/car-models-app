@@ -2,12 +2,12 @@
   "cars": [
     {
       "id": 1,
-      "Make":"Toyota",
-      "Model":"Rav",
+      "Make": "Toyota",
+      "Model": "Rav",
       "Year": "2020",
-      "Car_Info":"",
-      "Origin":"Japan",
-      "image":"https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "Car_Info": "",
+      "Origin": "Japan",
+      "image": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
-]
+  ]
 }
