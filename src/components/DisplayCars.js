@@ -58,7 +58,7 @@ function DisplayCars({myCars,classes,setCars,getMake}) {
             <StyledTableCell align="right">Model</StyledTableCell>
             <StyledTableCell align="right">Origin</StyledTableCell>
             <StyledTableCell align="right">Year</StyledTableCell>
-            <StyledTableCell align="right">Horse Power</StyledTableCell>
+            <StyledTableCell align="right">Type</StyledTableCell>
             <StyledTableCell align="right">Image</StyledTableCell>
             <StyledTableCell align="right">Delete</StyledTableCell>
           </TableRow>
@@ -71,7 +71,7 @@ function DisplayCars({myCars,classes,setCars,getMake}) {
               <StyledTableCell align="right">{car.Model}</StyledTableCell>
               <StyledTableCell align="right">{car.Origin}</StyledTableCell>
               <StyledTableCell align="right">{car.Year}</StyledTableCell>
-              <StyledTableCell align="right"><p>{car.Info}</p></StyledTableCell>
+              <StyledTableCell align="right"><p>{car.Type}</p></StyledTableCell>
               <StyledTableCell align="right"><img src={car.image} alt="car" width="193" height="130"/></StyledTableCell>
                <StyledTableCell align="right"> <Button variant="contained" color="secondary"  onClick={(e) => (
                  handleDelete(car.id)
