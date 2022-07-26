@@ -3,9 +3,9 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button'
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 });
 
 
-function DisplayCars({myCars,styles}) {
+function DisplayCars({myCars,styles,button}) {
   const classes = useStyles();
 
   const myCar=myCars.map((car)=>(
@@ -46,6 +46,8 @@ function DisplayCars({myCars,styles}) {
             <StyledTableCell align="right">Year</StyledTableCell>
             <StyledTableCell align="right">Car Info</StyledTableCell>
             <StyledTableCell align="right">Image</StyledTableCell>
+            <StyledTableCell align="right"></StyledTableCell>
+            <StyledTableCell align="right"></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -58,6 +60,8 @@ function DisplayCars({myCars,styles}) {
               <StyledTableCell align="right">{car.Year}</StyledTableCell>
               <StyledTableCell align="right">{car.Info}</StyledTableCell>
               <StyledTableCell align="right"><img src={car.image} alt="car image" width="193" height="130"/></StyledTableCell>
+               <StyledTableCell align="right"> <Button variant="contained" color="secondary" className={button}> Delete</Button ></StyledTableCell>
+               <StyledTableCell align="right">{car.Info}</StyledTableCell>
             </StyledTableRow>
         </TableBody>
       </Table>

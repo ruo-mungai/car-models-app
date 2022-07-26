@@ -9,7 +9,12 @@ function App() {
    const styles=useStyles();
 
   const [cars, setCars]=useState([])
-useEffect(() => {
+
+  function addCar(newCar) {
+    setCars([...cars, newCar])
+  }
+
+  useEffect(() => {
     fetch("http://localhost:3000/cars")
     .then(response => response.json())
     .then((data) => {
@@ -21,8 +26,8 @@ useEffect(() => {
     <div className={styles.app}>
        <h1 className={styles.heading}>React Car App</h1>
        <img src={images} style={{width:"300px"}} alt="car Pic"/>
-       <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField}/>
-       <DisplayCars myCars={cars} style={styles.app}/>
+       <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField} addCar={addCar}/>
+       <DisplayCars myCars={cars} style={styles.app} button={styles.buttonField}/>
     </div>
   )
 }
