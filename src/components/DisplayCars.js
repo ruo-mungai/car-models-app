@@ -29,12 +29,13 @@ const useStyles = makeStyles({
   table: {
     minWidth: 700,
   },
+  table2:{
+  minWidth:400,
+  }
 });
 
 
-function DisplayCars({myCars,styles,button,setCars,id}) {
-
-  const classes = useStyles();
+function DisplayCars({myCars,classes ,setCars,id}) {
 
   function handleDelete(id) {
     fetch(`http://localhost:3000/cars/${id}`, {
@@ -52,6 +53,7 @@ function DisplayCars({myCars,styles,button,setCars,id}) {
 
     
     <Table className={classes.table} aria-label="customized table" key={car.id}> 
+     
         <TableBody >
             <StyledTableRow >
               <StyledTableCell component="th" scope="row">
@@ -73,18 +75,20 @@ function DisplayCars({myCars,styles,button,setCars,id}) {
   
   return (
     <div  >
-      <TableHead>
+      <Table className={classes.table} aria-label="customized table" >
+    <TableHead >
           <TableRow>
-            <StyledTableCell>Make/Brand</StyledTableCell>
+            <StyledTableCell>Make</StyledTableCell>
             <StyledTableCell align="right">Model</StyledTableCell>
             <StyledTableCell align="right">Origin</StyledTableCell>
             <StyledTableCell align="right">Year</StyledTableCell>
             <StyledTableCell align="right">Horse Power</StyledTableCell>
             <StyledTableCell align="right">Image</StyledTableCell>
-            <StyledTableCell align="right"> </StyledTableCell>
-            <StyledTableCell align="right"> </StyledTableCell>
+            <StyledTableCell align="right">Delete</StyledTableCell>
           </TableRow>
         </TableHead>
+        </Table>
+     
      {myCar}
     </div>
   )

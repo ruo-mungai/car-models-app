@@ -4,7 +4,8 @@ import CarForm from './CarForm'
 import useStyles from './Styles'
 import DisplayCars from './DisplayCars'
 import {useState,useEffect} from 'react'
-import NavBar from './NavBar'
+import SearchAppBar from './SearchAppBar'
+import { Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -26,12 +27,16 @@ function App() {
   }, [])
   
   return (
-    <div className={styles.app}>
-      <NavBar styles={styles.heading}/>
-      
-       <img src={images} style={{width:"300px"}} alt="car Pic"/>
-       <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField} addCar={addCar}/>
-       <DisplayCars myCars={cars} style={styles.app} button={styles.buttonField} setCars={setCars} id={cars.id}/>
+    <div >
+       <SearchAppBar images={images} classes={styles} />
+       <Routes>
+         <Route exact path="/form" element=
+       {<CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField} addCar={addCar}/>}
+       />
+        <Route exact path="/" element=
+       {<DisplayCars myCars={cars} classes={styles.app} button={styles.buttonField} setCars={setCars} id={cars.id}/>}
+       />
+      </Routes>
     </div>
   )
 }
