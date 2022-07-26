@@ -22,7 +22,7 @@ useEffect(() => {
        <h1 className={styles.heading}>React Car App</h1>
        <img src={images} style={{width:"300px"}} alt="car Pic"/>
        <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField}/>
-       <DisplayCars myCars={cars}/>
+       <DisplayCars myCars={cars} style={styles.app}/>
     </div>
   )
 }
