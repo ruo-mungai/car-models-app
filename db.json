@@ -8,15 +8,6 @@
       "Car_Info": "",
       "Origin": "Japan",
       "image": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-      "Make": "BMW",
-      "Model": "x5",
-      "Origin": "Germany",
-      "Year": "2020",
-      "Info": "hejffrhf;hrufhjhfjhjhfjhfjhfhjhjf",
-      "image": "https://images.pexels.com/photos/100653/pexels-photo-100653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 2
     }
   ]
 }

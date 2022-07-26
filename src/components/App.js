@@ -4,6 +4,8 @@ import CarForm from './CarForm'
 import useStyles from './Styles'
 import DisplayCars from './DisplayCars'
 import {useState,useEffect} from 'react'
+import NavBar from './NavBar'
+
 
 function App() {
    const styles=useStyles();
@@ -25,7 +27,8 @@ function App() {
   
   return (
     <div className={styles.app}>
-       <h1 className={styles.heading}>React Car App</h1>
+      <NavBar styles={styles.heading}/>
+      
        <img src={images} style={{width:"300px"}} alt="car Pic"/>
        <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField} addCar={addCar}/>
        <DisplayCars myCars={cars} style={styles.app} button={styles.buttonField} setCars={setCars} id={cars.id}/>
