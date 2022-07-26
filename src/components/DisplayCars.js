@@ -36,6 +36,8 @@ function DisplayCars({myCars,styles,button,setCars,id}) {
 
   const classes = useStyles();
 
+  const [selectedFilter, setSelectedFilter] = useState("All");
+
   function handleDelete(id) {
     fetch(`http://localhost:3000/cars/${id}`, {
       method: "DELETE",
