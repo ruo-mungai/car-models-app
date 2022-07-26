@@ -13,6 +13,12 @@ function App() {
 
   const [cars, setCars]=useState([])
 
+  const [searchCar,setSearch]=useState("")
+
+  const search=(data)=>(
+    data.filter(car=>car.Make   )
+  )
+
   function addCar(newCar) {
     setCars([...cars, newCar])
   }
@@ -28,7 +34,7 @@ function App() {
   
   return (
     <div >
-       <SearchAppBar images={images} classes={styles} />
+       <SearchAppBar images={images} classes={styles} setSearch={setSearch} />
        <Routes>
          <Route exact path="/form" element=
        {<CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField} addCar={addCar}/>}

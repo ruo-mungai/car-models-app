@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import Button from '@material-ui/core/Button'
 
 
-export default function SearchAppBar({images,classes}) {
+export default function SearchAppBar({images,classes,setSearch}) {
 
   return (
     <>

@@ -35,7 +35,9 @@ const useStyles = makeStyles({
 });
 
 
-function DisplayCars({myCars,classes ,setCars,id}) {
+function DisplayCars({myCars,styles,button,setCars,id}) {
+
+  const classes = useStyles();
 
   function handleDelete(id) {
     fetch(`http://localhost:3000/cars/${id}`, {
@@ -53,7 +55,17 @@ function DisplayCars({myCars,classes ,setCars,id}) {
 
     
     <Table className={classes.table} aria-label="customized table" key={car.id}> 
-     
+     <TableHead >
+          <TableRow>
+            <StyledTableCell>Make</StyledTableCell>
+            <StyledTableCell align="right">Model</StyledTableCell>
+            <StyledTableCell align="right">Origin</StyledTableCell>
+            <StyledTableCell align="right">Year</StyledTableCell>
+            <StyledTableCell align="right">Horse Power</StyledTableCell>
+            <StyledTableCell align="right">Image</StyledTableCell>
+            <StyledTableCell align="right">Delete</StyledTableCell>
+          </TableRow>
+        </TableHead>
         <TableBody >
             <StyledTableRow >
               <StyledTableCell component="th" scope="row">
@@ -75,20 +87,6 @@ function DisplayCars({myCars,classes ,setCars,id}) {
   
   return (
     <div  >
-      <Table className={classes.table} aria-label="customized table" >
-    <TableHead >
-          <TableRow>
-            <StyledTableCell>Make</StyledTableCell>
-            <StyledTableCell align="right">Model</StyledTableCell>
-            <StyledTableCell align="right">Origin</StyledTableCell>
-            <StyledTableCell align="right">Year</StyledTableCell>
-            <StyledTableCell align="right">Horse Power</StyledTableCell>
-            <StyledTableCell align="right">Image</StyledTableCell>
-            <StyledTableCell align="right">Delete</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        </Table>
-     
      {myCar}
     </div>
   )
