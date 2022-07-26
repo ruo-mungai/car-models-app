@@ -32,8 +32,24 @@ const useStyles = makeStyles({
 });
 
 
-function DisplayCars({myCars,styles,button}) {
+function DisplayCars({myCars,styles,button,setCars,id}) {
+
   const classes = useStyles();
+
+  function handleDelete(id) {
+    fetch(`http://localhost:3000/cars/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => {
+        const deleteCar = myCars.filter((cars) => cars.id !== id);
+        setCars(deleteCar);
+      });
+  }
+    function onDelet(){
+      handleDelete(id)
+    }
+    
 
   const myCar=myCars.map((car)=>(
 
@@ -47,10 +63,11 @@ function DisplayCars({myCars,styles,button}) {
               <StyledTableCell align="right">{car.Model}</StyledTableCell>
               <StyledTableCell align="right">{car.Origin}</StyledTableCell>
               <StyledTableCell align="right">{car.Year}</StyledTableCell>
-              <StyledTableCell align="right">{car.Info}</StyledTableCell>
+              <StyledTableCell align="right"><p>{car.Info}</p></StyledTableCell>
               <StyledTableCell align="right"><img src={car.image} alt="car image" width="193" height="130"/></StyledTableCell>
-               <StyledTableCell align="right"> <Button variant="contained" color="secondary" className={button}> Delete</Button ></StyledTableCell>
-               <StyledTableCell align="right">{car.Info}</StyledTableCell>
+               <StyledTableCell align="right"> <Button variant="contained" color="secondary"  onClick={(e) => (
+                 handleDelete(car.id)
+               )} >Delete</Button ></StyledTableCell>
             </StyledTableRow>
         </TableBody>
       </Table>
@@ -65,7 +82,7 @@ function DisplayCars({myCars,styles,button}) {
             <StyledTableCell align="right">Model</StyledTableCell>
             <StyledTableCell align="right">Origin</StyledTableCell>
             <StyledTableCell align="right">Year</StyledTableCell>
-            <StyledTableCell align="right">Car Info</StyledTableCell>
+            <StyledTableCell align="right">Horse Power</StyledTableCell>
             <StyledTableCell align="right">Image</StyledTableCell>
             <StyledTableCell align="right"> </StyledTableCell>
             <StyledTableCell align="right"> </StyledTableCell>

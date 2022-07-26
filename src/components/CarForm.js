@@ -52,7 +52,7 @@ function CarForm({classes , textStyle, button,addCar}) {
        <TextField id="outlined-basic" label="Model" variant="outlined" className={textStyle} onChange={(e) => setModel(e.target.value)} value={model} />
        <TextField id="outlined-basic" label="Origin" variant="outlined" className={textStyle} onChange={(e) => setOrigin(e.target.value)} value={origin}  />
        <TextField id="outlined-basic" label="Year" variant="outlined" className={textStyle} onChange={(e) => setYear(e.target.value)} value={year}  />
-        <TextField id="outlined-basic" label="Car Info" variant="outlined" className={textStyle} onChange={(e) => setInfo(e.target.value)} value={info}   />
+        <TextField id="outlined-basic" label="Horse Power" variant="outlined" className={textStyle} onChange={(e) => setInfo(e.target.value)} value={info}   />
          <TextField id="outlined-basic" label="Image URL" variant="outlined" className={textStyle} onChange={(e) => setImage(e.target.value)} value={image}  />
         <Button variant="contained" color="secondary" className={button} onClick={handleSubmit}> Add a Car</Button >
     </div>

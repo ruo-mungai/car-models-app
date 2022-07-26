@@ -19,15 +19,16 @@ function App() {
     .then(response => response.json())
     .then((data) => {
       setCars(data)
+    
     })
   }, [])
- 
+  
   return (
     <div className={styles.app}>
        <h1 className={styles.heading}>React Car App</h1>
        <img src={images} style={{width:"300px"}} alt="car Pic"/>
        <CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField} addCar={addCar}/>
-       <DisplayCars myCars={cars} style={styles.app} button={styles.buttonField}/>
+       <DisplayCars myCars={cars} style={styles.app} button={styles.buttonField} setCars={setCars} id={cars.id}/>
     </div>
   )
 }
