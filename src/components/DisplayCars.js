@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -25,19 +25,10 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 700,
-  },
-  table2:{
-  minWidth:400,
-  }
-});
 
 
-function DisplayCars({myCars,styles,button,setCars,id}) {
+function DisplayCars({myCars,classes,setCars,getMake}) {
 
-  const classes = useStyles();
 
   function handleDelete(id) {
     fetch(`http://localhost:3000/cars/${id}`, {
@@ -51,7 +42,7 @@ function DisplayCars({myCars,styles,button,setCars,id}) {
   }
     
 
-  const myCar=myCars.map((car)=>(
+  const myCar= getMake.map((car)=>(
 
     
     <Table className={classes.table} aria-label="customized table" key={car.id}> 
@@ -75,7 +66,7 @@ function DisplayCars({myCars,styles,button,setCars,id}) {
               <StyledTableCell align="right">{car.Origin}</StyledTableCell>
               <StyledTableCell align="right">{car.Year}</StyledTableCell>
               <StyledTableCell align="right"><p>{car.Info}</p></StyledTableCell>
-              <StyledTableCell align="right"><img src={car.image} alt="car image" width="193" height="130"/></StyledTableCell>
+              <StyledTableCell align="right"><img src={car.image} alt="car" width="193" height="130"/></StyledTableCell>
                <StyledTableCell align="right"> <Button variant="contained" color="secondary"  onClick={(e) => (
                  handleDelete(car.id)
                )} >Delete</Button ></StyledTableCell>
@@ -86,7 +77,7 @@ function DisplayCars({myCars,styles,button,setCars,id}) {
   ));
   
   return (
-    <div  >
+    <div  > 
      {myCar}
     </div>
   )

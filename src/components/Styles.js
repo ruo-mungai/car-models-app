@@ -9,7 +9,7 @@ const useStyles= makeStyles((theme)=>({
     },
       buttonField:{
       margin:"10px 0",
-       width:"10%",
+       width:"20%",
       height:"30px",
       top:"10px"
 
@@ -70,6 +70,12 @@ const useStyles= makeStyles((theme)=>({
   },
   inputRoot: {
     color: 'inherit',
+  },
+  table: {
+    minWidth: 700,
+  },
+  table2:{
+  minWidth:400,
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),

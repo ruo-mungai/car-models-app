@@ -32,7 +32,7 @@ export default function SearchAppBar({images,classes,setSearch}) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-             />
+              onChange={(e)=>setSearch(e.target.value)}/>
           </div>
             <img src={images} style={{width:"300px", alighnitem:"center"}} alt="car Pic"/>
             

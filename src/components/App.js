@@ -14,10 +14,11 @@ function App() {
   const [cars, setCars]=useState([])
 
   const [searchCar,setSearch]=useState("")
+   
 
   const search=(data)=>(
-    data.filter(car=>car.Make   )
-  )
+    data.filter((car)=>car.Make.toLowerCase().includes(searchCar) || car.Year.includes(searchCar) || car.Model.toLowerCase().includes(searchCar) ||car.Origin.toLowerCase().includes(searchCar) 
+  )) 
 
   function addCar(newCar) {
     setCars([...cars, newCar])
@@ -40,7 +41,7 @@ function App() {
        {<CarForm classes={styles.app} textStyle={styles.textField} button={styles.buttonField} addCar={addCar}/>}
        />
         <Route exact path="/" element=
-       {<DisplayCars myCars={cars} classes={styles.app} button={styles.buttonField} setCars={setCars} id={cars.id}/>}
+       {<DisplayCars myCars={cars} classes={styles} button={styles.buttonField} setCars={setCars} id={cars.id} getMake={search(cars)}/>}
        />
       </Routes>
     </div>
