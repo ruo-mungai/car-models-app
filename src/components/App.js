@@ -15,9 +15,10 @@ function App() {
 
   const [searchCar,setSearch]=useState("")
    
+  
 
   const search=(data)=>(
-    data.filter((car)=>car.Make.toLowerCase().includes(searchCar) || car.Year.includes(searchCar) || car.Model.toLowerCase().includes(searchCar) ||car.Origin.toLowerCase().includes(searchCar) || car.Type.toLowerCase().includes(searchCar)
+    data.filter((car)=>(car.Make.toLowerCase().includes(searchCar)) || (car.Model.toLowerCase().includes(searchCar))
   )) 
 
   function addCar(newCar) {

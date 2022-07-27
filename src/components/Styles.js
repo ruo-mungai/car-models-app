@@ -2,9 +2,9 @@ import { alpha, makeStyles } from '@material-ui/core/styles'
 
 const useStyles= makeStyles((theme)=>({
     textField:{
-      margin:"20px 0",
-       width:"40%",
-      height:"30px",
+      margin:"10px 10px",
+       width:"50%",
+      height:"40px",
      
     },
       buttonField:{
@@ -24,6 +24,12 @@ const useStyles= makeStyles((theme)=>({
      
     },
     app:{
+      display:"flex",
+      alignItems:"center",
+      justifyContent:"center",
+      flexDirection:"column"
+    },
+    app2:{
       display:"flex",
       alignItems:"center",
       justifyContent:"center",
