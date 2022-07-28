@@ -1,13 +1,68 @@
 {
   "cars": [
     {
-      "id": 1,
       "Make": "Toyota",
-      "Model": "Rav",
+      "Model": " 4Runner",
       "Year": "2020",
-      "Type": "",
-      "Origin": "Japan",
-      "image": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "Type": "The 5 passenger 4Runner TRD Off-Road features a rugged part-time 4-wheel drive system, locking rear differential, Kinetic Suspension System with coil springs, skid-plates, multi-terrain ABS, and more. 4Runner is ready for your off-road adventures.",
+      "image": "https://www.1000islandstoyota.com/uploads/vehicles/11137/2020_toyota_4runner_2039_1.jpg",
+      "id": 1
+    },
+    {
+      "Make": "Toyota",
+      "Model": "Avalon 3T3",
+      "Year": "2019",
+      "Type": "More Power with Less Fuel Thrill to Avalon’s dynamic performance, courtesy of a new direct-injection 3.5-litre V6 mated to a direct shift 8-speed automatic transmission. Capable of generating 301 horsepower, it’s also remarkably fuel efficient, requiring just 10.9 L/100k in the city†. Turns out, you can have your cake and eat it too.",
+      "image": "https://d3ogcz7gf2u1oh.cloudfront.net/dealers/1000islands/assets/avalon1_1.jpeg",
+      "id": 2
+    },
+    {
+      "Make": "Toyota",
+      "Model": "Camry SE",
+      "Year": "2022",
+      "Type": "Toyota’s new Safety Sense system (TSS-P) is standard on Corolla, and includes a pre-collision avoidance system that assists in warning the driver of potential dangers. Also included are automatic high beams, a lane departure alert system as well as dynamic radar cruise control, available on all Camry Hybrids and gas models including XLE, XLE V6, XSE, and XSE V6.",
+      "image": "https://d3ogcz7gf2u1oh.cloudfront.net/dealers/1000islands/assets/camryf3.jpg",
+      "id": 3
+    },
+    {
+      "Make": "Toyota",
+      "Model": "Sienna",
+      "Year": "2020",
+      "Type": "Toyota Safety SenseTM (TSS) is designed to help protect drivers, passengers, people in other vehicles on the road, and pedestrians (TSS-P only). TSS is comprised of multi-feature active safety packages anchored by automated pre-collision warning and braking. ",
+      "image": "https://d3ogcz7gf2u1oh.cloudfront.net/dealers/1000islands/assets/sienna-safety.jpg",
+      "id": 4
+    },
+    {
+      "Make": "BMW",
+      "Model": "BMW X1",
+      "Year": "",
+      "Type": "The new generation BMW TwinPower Turbo 2.0-Litre 4-cylinder petrol engine guarantees maximum driving pleasure. It is notable for its agile power delivery as well as for its outstanding responsiveness even at low engine speeds, while also being fuel efficient and low in emissions.",
+      "image": "https://www.bmw.in/content/dam/bmw/common/all-models/x-series/x1/2019/inform/bmw-x-series-x1-inform-multicontent-01-hero-dekstop.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1558452688097.jpg",
+      "id": 5
+    },
+    {
+      "Make": "BMW",
+      "Model": "BMW X4",
+      "Year": "",
+      "Type": "The new generation BMW TwinPower Turbo 2.0-Litre 4-cylinder petrol engine guarantees maximum driving pleasure. It is notable for its agile power delivery as well as for its outstanding responsiveness even at low engine speeds, while also being fuel efficient and low in emissions.",
+      "image": "https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/all-models/x-series/X4/2021/Accessories_Desktop_1680x756_02.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1649927455551.jpg",
+      "id": 6
+    },
+    {
+      "Make": "Ford",
+      "Model": "Focus wagon",
+      "Year": "2021",
+      "Type": "For the interior, Ford focused on the technology department and installed the SYNC 4 infotainment system. It features a new 13.2\" touchscreen placed atop the center stack. Unlike other carmakers in the compact, mass-market segment, it provided more features, including voice commands for accepting calls and navigation and controlling the audio and climate control systems. Since it shared the same bodywork with the station-wagon version, the Focus Active Wagon provided a 608 liter (21.5 cu-ft) trunk, which the user could expand up to 1,653 liters (58.4 cu-ft) with the rear bench folded.",
+      "image": "https://s1.cdn.autoevolution.com/images/models/FORD_Focus-Active-Wagon-2021_main.jpg",
+      "id": 7
+    },
+    {
+      "Make": "Ford",
+      "Model": "Ranger",
+      "Year": "2021",
+      "Type": "Under the hood, Ford announced a two-liter turbodiesel available in two power outputs, or a V6 oil-burner developed with Volkswagen. In addition, a six-speed manual or a ten-speed automatic was available, depending on the version and options. A 2.3-liter EcoBoost gasoline powerplant and a hybrid option were available in specific markets",
+      "image": "https://s1.cdn.autoevolution.com/images/models/FORD_Ranger-Double-Cab-2021_main.jpg",
+      "id": 8
     }
   ]
 }
