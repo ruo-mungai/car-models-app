@@ -17,27 +17,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function DisplayCars({myCars,classes,setCars,getMake}) {
 
 const classes2 = useStyles();
 
   function handleDelete(id) {
-    fetch(`http://localhost:3000/cars/${id}`, {
+    fetch(`http://localhost:8000/cars/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())

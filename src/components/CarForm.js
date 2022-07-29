@@ -22,7 +22,7 @@ function CarForm({classes , textStyle, button,addCar}) {
       image:image
     }
 
-    fetch("http://localhost:3000/cars", {
+    fetch("http://localhost:8000/cars", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
